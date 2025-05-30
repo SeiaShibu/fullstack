@@ -1,0 +1,5 @@
+
+curl -s https://www.amfiindia.com/spages/NAVAll.txt |
+awk -F ';' 'NR > 1 && NF > 5 { print $4 "\t" $6 }' > nav_data.tsv
+
+echo "[+] Extracted data to nav_data.tsv"
